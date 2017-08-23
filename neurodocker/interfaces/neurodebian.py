@@ -97,7 +97,7 @@ class NeuroDebian(object):
                # Syntax from
                # https://github.com/poldracklab/fmriprep/blob/master/Dockerfile#L21
                "\n&& (apt-key adv --refresh-keys --keyserver"
-               " hkp://pool.sks-keyservers.net:80 0xA5D32F012649A5A9 || true)"
+               " hkp://p80.pool.sks-keyservers.net:80 0xA5D32F012649A5A9 || true)"
                "\n&& apt-get update"
                "".format(url=self.url, **manage_pkgs['apt']).format(pkgs=pkgs))
         return indent("RUN", cmd)
